@@ -1,0 +1,762 @@
+{
+	"info": {
+		"_postman_id": "fa3222d4-f418-4536-996b-cc3030ec9047",
+		"name": "eRezLife Public APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6420859"
+	},
+	"item": [
+		{
+			"name": "Housing",
+			"item": [
+				{
+					"name": "Assignments",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/assignment/",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"assignment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Dates",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/assignment/?session_start_date=2023-8-30&session_end_date=2023-12-29",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "session_start_date",
+									"value": "2023-8-30"
+								},
+								{
+									"key": "session_end_date",
+									"value": "2023-12-29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Student ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/assignment/?student_id=ASTUDENTSID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "student_id",
+									"value": "ASTUDENTSID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Session ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/assignment/?session_id=YOURSESSIONID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "session_id",
+									"value": "YOURSESSIONID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/changelog/?timestamp=2023-01-21T21:35:46.606+00:00",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-01-21T21:35:46.606+00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Student ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/changelog/?&timestamp=2022-12-15T21:32:00+00:00&student_id=ASTUDENTSID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "timestamp",
+									"value": "2022-12-15T21:32:00+00:00"
+								},
+								{
+									"key": "student_id",
+									"value": "ASTUDENTSID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Session ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/housing/changelog/?page=1&timestamp=2022-12-15T21:32:00+00:00&session_id=YOURSESSIONID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"housing",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "timestamp",
+									"value": "2022-12-15T21:32:00+00:00"
+								},
+								{
+									"key": "session_id",
+									"value": "YOURSESSIONID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meal Plans",
+			"item": [
+				{
+					"name": "Assignments",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/assignment/",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"assignment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Dates",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/assignment/?session_start_date=2023-8-30&session_end_date=2023-12-29",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "session_start_date",
+									"value": "2023-8-30"
+								},
+								{
+									"key": "session_end_date",
+									"value": "2023-12-29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Student ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/assignment/?student_id=ASTUDENTSID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "student_id",
+									"value": "ASTUDENTSID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignments - Filter by Session ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/assignment/?session_id=YOURSESSIONID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"assignment",
+								""
+							],
+							"query": [
+								{
+									"key": "session_id",
+									"value": "YOURSESSIONID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/changelog/?timestamp=2023-01-23T19:49:48.274+00:00",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-01-23T19:49:48.274+00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Student ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/changelog/?timestamp=2023-03-06T15:54:00.002+00:00&student_id=ASTUDENTSID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-03-06T15:54:00.002+00:00"
+								},
+								{
+									"key": "student_id",
+									"value": "ASTUDENTSID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Session ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/meal-plan/changelog/?timestamp=2023-03-22T01:44:22.431+00:00&session_id=YOURSESSIONID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"meal-plan",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-03-22T01:44:22.431+00:00"
+								},
+								{
+									"key": "session_id",
+									"value": "YOURSESSIONID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financial Line Items",
+			"item": [
+				{
+					"name": "Change Log - Since Timestamp",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/financials/line-item/changelog/?timestamp=2023-03-23T00:00:00.000-00:00",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"financials",
+								"line-item",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-03-23T00:00:00.000-00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Student ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/financials/line-item/changelog/?timestamp=2023-03-08T17:00:00.000-00:00&student_id=ASTUDENTSID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"financials",
+								"line-item",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-03-08T17:00:00.000-00:00"
+								},
+								{
+									"key": "student_id",
+									"value": "ASTUDENTSID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Log - Since Timestamp - Filter by Session ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site URL}}/api/financials/line-item/changelog/?timestamp=2023-03-08T17:00:00.000-00:00&session_id=YOURSESSIONID",
+							"host": [
+								"{{Site URL}}"
+							],
+							"path": [
+								"api",
+								"financials",
+								"line-item",
+								"changelog",
+								""
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-03-08T17:00:00.000-00:00"
+								},
+								{
+									"key": "session_id",
+									"value": "YOURSESSIONID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{API Key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var querycount = pm.request.url.query.count();",
+					"for(let i = 0; i < querycount; i++) {",
+					"  pm.request.url.query.idx(i).value = encodeURIComponent(pm.request.url.query.idx(i).value);",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Site URL",
+			"value": "https://example.erezlife.com",
+			"type": "string"
+		},
+		{
+			"key": "API Key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
